@@ -64,6 +64,10 @@ io.on("connection", (socket) => {
 		}
 	});
 
+	socket.on("TYPING", ({ chatId, sender }) => {
+		socket.to(chatId).except(sender).emit("TYPING");
+	});
+
 	socket.on("disconnecting", () => {
 		const rooms = Array.from(socket.rooms);
 		rooms.forEach((room) => {
