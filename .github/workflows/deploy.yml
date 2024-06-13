@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "hw-backend-2"
-          entrypoint: "index.ts"
+          entrypoint: "src/index.ts"
           root: ""
