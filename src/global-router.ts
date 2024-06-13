@@ -1,14 +1,10 @@
-import { Router } from 'express';
-import authRouter from './auth/auth-router';
-import eventRouter from './events/event-router';
+import { Router } from "express";
+import chatRouter from "./chats/chat-router";
 // other routers can be imported here
 
 const globalRouter = Router();
 
-
-globalRouter.use(authRouter);
-globalRouter.use(eventRouter);
-
+globalRouter.use(chatRouter);
 
 // other routers can be added here
 
